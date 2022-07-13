@@ -1,0 +1,21 @@
+INSERT INTO CONFIGURATION (
+    CLUSTER_NAME,
+    BOOTSTRAP_SERVER,
+    ADDITIONAL_PROPERTIES,
+    COLOR
+) VALUES (
+    'KDM_KAFKA',
+    'http://localhost:8082',
+    'teste KDM',
+    '#33232'
+);
+
+INSERT INTO KAFKA_CONNECT (
+    NAME,
+    URL,
+    ID_CONFIGURATION
+) VALUES (
+    'KMD_CONNECT',
+    'http://localhost:8083',
+    'KDM_KAFKA'
+);
